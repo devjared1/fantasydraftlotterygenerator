@@ -1,4 +1,4 @@
-# golfapp
+# fantasydraftlotterygenerator
 
 ## Project setup
 ```
