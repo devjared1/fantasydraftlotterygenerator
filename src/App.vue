@@ -1,32 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="inspire" class="min-h-screen h-screen overflow-hidden bg-gray-900 text-white">
+    <!-- <component v-if="!showSplash" :is="this.$route.meta.layout || 'div'">
+      <router-view />
+    </component> -->
+    <div>
+      <router-view />
     </div>
-    <router-view/>
+    <Snackbar />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Snackbar from '@/components/base/Snackbar.vue'
+export default {
+  name: 'App',
+  components: { Snackbar },
+  data: () => ({
+  }),
+  methods: {
   }
 }
-</style>
+</script>
+
+<style src="@/assets/css/main.css" />
